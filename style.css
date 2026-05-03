@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 15px 20px; /* first value top & bottom second is left and right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 8px 12px;
+  transition: 0.3s;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: block; /* Optional */
+}
+
+nav ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+nav ul li a.contact {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+nav ul li a.contact:hover {
+  background: #ccc;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background-image: url("assets/wp.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem;
+}
+
+.hero-content {
+  max-width: 420px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 0.9rem;
+  color: #eee;
+  margin-bottom: 1.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-solid {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+  display: inline-block;
+  border: 2px solid #fff;
+  background: #fff;
+  color: #000;
+}
+
+.btn-solid:hover {
+  background: #ccc;
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+  display: inline-block;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* SECTIONS */
+section {
+  min-height: 100vh;
+  padding: 100px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.btn-accent {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+  display: inline-block;
+  background: #aaa;
+  color: #000;
+  border: 2px solid #aaa;
+}
+
+.btn-accent:hover {
+  background: #888;
+  border-color: #888;
+  color: #fff;
+}
+
+/* DESTINATIONS */
+.destinations-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 1.5rem;
+}
+
+.dest-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.dest-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 1;
+}
+
+.dest-img {
+  width: 100%;
+  height: 240px;
+  background: #bbb;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.dest-card:hover .dest-img {
+  opacity: 1;
+}
+
+.dest-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.dest-name {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ABOUT */
+.about-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  text-align: left;
+}
+
+.about-img {
+  width: 300px;
+  height: 360px;
+  background-image: url("assets/ELIJAHPIC.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+}
+
+.about-text {
+  width: 50%;
+}
+
+.about-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.about-text .btn-accent {
+  margin-top: 0.5rem;
+}
+
+/* CRUISE CARDS */
+.cruise-section-inner {
+  width: 100%;
+  max-width: 960px;
+  text-align: left;
+}
+
+.cruise-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.cruise-section-header h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.cruise-cards-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.cruise-card {
+  flex: 1;
+  cursor: pointer;
+}
+
+.cruise-img {
+  width: 100%;
+  height: 170px;
+  border-radius: 6px;
+  background: #bbb;
+  margin-bottom: 0.5rem;
+  transition: 0.3s;
+}
+
+.cruise-card:hover .cruise-img {
+  background: #999;
+}
+
+.cruise-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+.footer-top {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 0.82rem;
+  color: #888;
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+
+.footer-col a {
+  font-size: 0.85rem;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
